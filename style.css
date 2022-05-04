@@ -1,0 +1,224 @@
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e7dfd0;
+  font-family: sans-serif;
+}
+
+#form {
+  width: 400px;
+  min-height: 300px;
+  gap: 20px;
+  background-color: white;
+  border: 1px solid rgb(172, 172, 172);
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
+  overflow: hidden;
+  align-items: center;
+}
+
+#top_div_yellow {
+  width: 100%;
+  height: 28px;
+  background-color: #FFDC40;
+}
+
+#label {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  align-items: center;
+  font-size: 40px;
+  font-weight: 700;
+}
+
+#button {
+  color: white;
+  background-color: #833ae0;
+  border: 0px;
+  margin: 10px;
+  height: 42px;
+  width: 150px;
+  border-radius: 71px;
+}
+
+#buttonDelAll{
+  color: white;
+  background-color: #833ae0;
+  border: 0px;
+  margin: 10px;
+  height: 42px;
+  width: 150px;
+  border-radius: 71px;
+  cursor: pointer;
+}
+
+#add_delete_div{
+  display: inline-flex;
+}
+
+#button:hover {
+  cursor: pointer;
+}
+
+#plus, #cross {
+  background-color: #9953f1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  left: -6px;
+  top: -1px;
+  height: 42px;
+  width: 42px;
+  border-radius: 71px;
+}
+
+#button_text, #buttonDelAll_text {
+  position: relative;
+  bottom: 33px;
+  left: 8px;
+  
+}
+
+#ul_list {
+  margin: 0;
+}
+
+.ul_list {
+  border: 1px solid gray;
+  border-radius: 10px;
+  width: 286px;
+}
+
+.correcting_task {
+  margin: 5px 10px;
+  font-size: 20px;
+  display: flex;
+  justify-content: space-between;
+  border: 0;
+}
+
+#correcting_input{
+padding: 1rem;
+background-color: white;
+border: 1px solid black;
+}
+
+#task_input {
+  width: 286px;
+  border-radius: 10px;
+  border: 1px solid gray;
+  padding: 5px;
+  font-size: 20px;
+  font-weight: 200;
+}
+
+.deleteTask {
+  border: 1px solid gray;
+  border-radius: 200px;
+  padding: 0 8px;
+  height: 25px;
+  margin-top: 20px;
+  background-color: white;
+  font-size: 15px;
+}
+
+.deleteTask:hover {
+  background-color: #833ae0;
+  color: white;
+}
+
+#button_sort {
+  position: relative;
+  left: 125px;
+  border: 0;
+  background-color: white;
+  margin: 5px;
+  cursor: pointer;
+  
+}
+
+
+#correcting_input {
+  border: 0px;
+  outline: none;
+  max-width: 235px;
+  text-transform: capitalize;
+}
+
+
