@@ -130,16 +130,6 @@ export default class View {
     return input;
   }
 
-  // createImg(props) {
-  //   const div = document.createElement('div')
-
-  //   props.text && (div.innerHTML = props.text);
-
-  //   props.class && (div.className = props.class);
-
-  //   return div;
-  // }
-
   createButton(props) {
     const button = document.createElement("button");
 

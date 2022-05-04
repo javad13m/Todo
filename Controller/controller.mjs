@@ -4,15 +4,12 @@ export default class Controller {
     this.model = model;
   }
 
-  //the entry of program
   init() {
     this.view.init();
     this.view.form.addEventListener("submit", (event) => {
-      event.preventDefault(); //prevent the reboot of page
-      const data = new FormData(event.target); //To get the values,
-      //the data of the form fields must be represented in the FormData object.
+      event.preventDefault(); 
+      const data = new FormData(event.target); 
       const task = data.get("task_input");
-      // the creating of task
       if (task !== "") {
         this.view.ul.className = "ul_list";
         this.model.addInput(task);
@@ -22,7 +19,6 @@ export default class Controller {
       }
     });
 
-    // sorting of tasks
     this.view.buttonSort.addEventListener("click", (event) => {
       event.target.classList.toggle("button_sort");
       if (event.target.className !== "button_sort") {
@@ -49,7 +45,6 @@ export default class Controller {
   render() {
     this.view.ul.innerHTML = "";
     this.model.array.forEach((el, index) => {
-      // correcting the task
       this.li = this.view.createLi({
         class: "correcting_task",
       });
@@ -63,12 +58,10 @@ export default class Controller {
       this.view.ul.append(this.li);
       this.li.append(this.newInput);
 
-      // saving of corrected task
       this.newInput.addEventListener("keyup", (event) => {
         this.model.changeTask(index, event.target.value);
       });
 
-      // deleting of task
       this.deleteButton = this.view.createButton({
         text: '<i class="fa-solid fa-xmark"></i>',
         class: "deleteTask",
